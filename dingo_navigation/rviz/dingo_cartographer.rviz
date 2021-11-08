@@ -3,7 +3,11 @@ Panels:
     Help Height: 78
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /Grid1
+        - /Map1
       Splitter Ratio: 0.5794117450714111
     Tree Height: 719
   - Class: rviz_common/Selection
@@ -40,217 +44,6 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Class: rviz_common/Group
-      Displays:
-        - Class: rviz_common/Group
-          Displays:
-            - Alpha: 0.699999988079071
-              Class: rviz_default_plugins/Map
-              Color Scheme: costmap
-              Draw Behind: true
-              Enabled: true
-              Name: Map
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /global_costmap/costmap
-              Update Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /global_costmap/costmap_updates
-              Use Timestamp: false
-              Value: true
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz_default_plugins/Path
-              Color: 255; 0; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Lines
-              Line Width: 0.029999999329447746
-              Name: Path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /global_plan
-              Value: true
-          Enabled: true
-          Name: Global Map
-        - Class: rviz_common/Group
-          Displays:
-            - Alpha: 1
-              Class: rviz_default_plugins/Polygon
-              Color: 25; 255; 0
-              Enabled: true
-              Name: Polygon
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /local_costmap/footprint
-              Value: true
-            - Alpha: 0.699999988079071
-              Class: rviz_default_plugins/Map
-              Color Scheme: costmap
-              Draw Behind: false
-              Enabled: true
-              Name: Map
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /local_costmap/costmap
-              Update Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /local_costmap/costmap_updates
-              Use Timestamp: false
-              Value: true
-            - Alpha: 1
-              Buffer Length: 1
-              Class: rviz_default_plugins/Path
-              Color: 255; 255; 0
-              Enabled: true
-              Head Diameter: 0.30000001192092896
-              Head Length: 0.20000000298023224
-              Length: 0.30000001192092896
-              Line Style: Lines
-              Line Width: 0.029999999329447746
-              Name: Path
-              Offset:
-                X: 0
-                Y: 0
-                Z: 0
-              Pose Color: 255; 85; 255
-              Pose Style: None
-              Radius: 0.029999999329447746
-              Shaft Diameter: 0.10000000149011612
-              Shaft Length: 0.10000000149011612
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /local_plan
-              Value: true
-          Enabled: true
-          Name: Local Map
-        - Alpha: 1
-          Arrow Length: 0.05000000074505806
-          Axes Length: 0.30000001192092896
-          Axes Radius: 0.009999999776482582
-          Class: rviz_default_plugins/PoseArray
-          Color: 0; 192; 0
-          Enabled: true
-          Head Length: 0.07000000029802322
-          Head Radius: 0.029999999329447746
-          Name: PoseArray
-          Shaft Length: 0.23000000417232513
-          Shaft Radius: 0.009999999776482582
-          Shape: Arrow (Flat)
-          Topic:
-            Depth: 5
-            Durability Policy: Volatile
-            History Policy: Keep Last
-            Reliability Policy: Reliable
-            Value: /particlecloud
-          Value: true
-      Enabled: false
-      Name: Navigation
-    - Class: rviz_common/Group
-      Displays:
-        - Alpha: 1
-          Autocompute Intensity Bounds: true
-          Autocompute Value Bounds:
-            Max Value: 0.18203988671302795
-            Min Value: 0.18195410072803497
-            Value: true
-          Axis: Z
-          Channel Name: intensity
-          Class: rviz_default_plugins/PointCloud2
-          Color: 0; 255; 0
-          Color Transformer: FlatColor
-          Decay Time: 0
-          Enabled: true
-          Invert Rainbow: false
-          Max Color: 255; 255; 255
-          Max Intensity: 4096
-          Min Color: 0; 0; 0
-          Min Intensity: 0
-          Name: scan_matched_points2
-          Position Transformer: XYZ
-          Selectable: true
-          Size (Pixels): 3
-          Size (m): 0.029999999329447746
-          Style: Tiles
-          Topic:
-            Depth: 5
-            Durability Policy: Volatile
-            History Policy: Keep Last
-            Reliability Policy: Reliable
-            Value: /scan_matched_points2
-          Use Fixed Frame: true
-          Use rainbow: true
-          Value: true
-        - Class: rviz_default_plugins/MarkerArray
-          Enabled: false
-          Name: Trajectories
-          Namespaces:
-            {}
-          Topic:
-            Depth: 5
-            Durability Policy: Volatile
-            History Policy: Keep Last
-            Reliability Policy: Reliable
-            Value: /trajectory_node_list
-          Value: false
-        - Class: rviz_default_plugins/MarkerArray
-          Enabled: false
-          Name: Constraints
-          Namespaces:
-            {}
-          Topic:
-            Depth: 5
-            Durability Policy: Volatile
-            History Policy: Keep Last
-            Reliability Policy: Reliable
-            Value: /constraint_list
-          Value: false
-        - Class: rviz_default_plugins/MarkerArray
-          Enabled: false
-          Name: Landmark Poses
-          Namespaces:
-            {}
-          Topic:
-            Depth: 5
-            Durability Policy: Volatile
-            History Policy: Keep Last
-            Reliability Policy: Reliable
-            Value: /landmark_poses_list
-          Value: false
-      Enabled: true
-      Name: Cartographer
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -259,17 +52,17 @@ Visualization Manager:
         Value: true
       Axis: Z
       Channel Name: intensity
-      Class: rviz_default_plugins/LaserScan
+      Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 4096
+      Max Intensity: 129
       Min Color: 0; 0; 0
       Min Intensity: 0
-      Name: LaserScan
+      Name: PointCloud2
       Position Transformer: XYZ
       Selectable: true
       Size (Pixels): 3
@@ -280,104 +73,34 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /velodyne/front/points
+        Value: /velodyne_points
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
-    - Class: rviz_default_plugins/TF
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
       Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: true
-        base_link:
-          Value: true
-        chassis_link:
-          Value: true
-        front_b_mount:
-          Value: true
-        front_bumper_mount:
-          Value: true
-        front_c_mount:
-          Value: true
-        front_mount:
-          Value: true
-        front_vlp16_leg1:
-          Value: true
-        front_vlp16_leg2:
-          Value: true
-        front_vlp16_leg3:
-          Value: true
-        front_vlp16_leg4:
-          Value: true
-        front_vlp16_mount:
-          Value: true
-        front_vlp16_plate:
-          Value: true
-        imu_link:
-          Value: true
-        left_wheel_link:
-          Value: true
-        odom:
-          Value: true
-        rear_b_mount:
-          Value: true
-        rear_c_mount:
-          Value: true
-        rear_caster:
-          Value: true
-        rear_mount:
-          Value: true
-        right_wheel_link:
-          Value: true
-        velodyne:
-          Value: true
-        velodyne_base_link:
-          Value: true
-      Marker Scale: 1
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: false
-      Tree:
-        odom:
-          base_link:
-            chassis_link:
-              front_bumper_mount:
-                {}
-              front_c_mount:
-                front_b_mount:
-                  front_mount:
-                    front_vlp16_leg1:
-                      {}
-                    front_vlp16_leg2:
-                      {}
-                    front_vlp16_leg3:
-                      {}
-                    front_vlp16_leg4:
-                      {}
-                    front_vlp16_mount:
-                      front_vlp16_plate:
-                        velodyne_base_link:
-                          velodyne:
-                            {}
-              imu_link:
-                {}
-              left_wheel_link:
-                {}
-              rear_c_mount:
-                rear_b_mount:
-                  rear_mount:
-                    {}
-              rear_caster:
-                {}
-              right_wheel_link:
-                {}
-      Update Interval: 0
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map_updates
+      Use Timestamp: false
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -424,7 +147,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 135.55735778808594
+      Scale: 104.97561645507812
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz_default_plugins)
       X: 1.165248990058899

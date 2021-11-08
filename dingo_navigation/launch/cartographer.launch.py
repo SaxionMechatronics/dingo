@@ -26,7 +26,7 @@ from launch.substitutions import ThisLaunchFileDir
 
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     dingo_cartographer_prefix = get_package_share_directory('dingo_navigation')
     cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(
                                                   dingo_cartographer_prefix, 'config'))
@@ -39,7 +39,7 @@ def generate_launch_description():
     rviz_config_dir = os.path.join(get_package_share_directory('dingo_navigation'),
                                    'rviz', 'dingo_cartographer.rviz')
 
-    remappings = [('/points2', '/velodyne/front/points')]
+    remappings = [('/points2', '/velodyne_points')]
 
     return LaunchDescription([
         DeclareLaunchArgument(

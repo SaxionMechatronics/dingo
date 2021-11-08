@@ -21,7 +21,7 @@ options = {
   map_builder = MAP_BUILDER,
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
-  tracking_frame = "imu_link",
+  tracking_frame = "base_link",
   published_frame = "base_link",
   odom_frame = "odom",
   provide_odom_frame = false,
@@ -40,14 +40,16 @@ options = {
   rangefinder_sampling_ratio = 1.,
   odometry_sampling_ratio = 1.,
   fixed_frame_pose_sampling_ratio = 1.,
-  imu_sampling_ratio = 1.,
+  imu_sampling_ratio = 0.,
   landmarks_sampling_ratio = 1.,
 }
 
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
 TRAJECTORY_BUILDER_2D.use_imu_data = false
-
-MAP_BUILDER.use_trajectory_builder_3d = true
+--TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+MAP_BUILDER.use_trajectory_builder_2d = true
 MAP_BUILDER.num_background_threads = 7
+POSE_GRAPH.optimize_every_n_nodes = 640
 
 return options
