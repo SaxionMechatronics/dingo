@@ -25,7 +25,7 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     map_dir = LaunchConfiguration('map', default=os.path.join(get_package_share_directory('dingo_navigation'),
                                   'map', 'map.yaml'))
 
@@ -35,8 +35,8 @@ def generate_launch_description():
 
     nav2_launch_file_dir = os.path.join(get_package_share_directory('nav2_bringup'), 'launch')
 
-    rviz_config_dir = os.path.join(get_package_share_directory('nav2_bringup'),
-                                   'rviz', 'nav2_default_view.rviz')
+    rviz_config_dir = os.path.join(get_package_share_directory('dingo_navigation'),
+                                   'rviz', 'dingo_nav2.rviz')
 
     return LaunchDescription([
         DeclareLaunchArgument('map', default_value=map_dir,
