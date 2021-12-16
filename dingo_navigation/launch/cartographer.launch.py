@@ -26,7 +26,7 @@ from launch.substitutions import ThisLaunchFileDir
 
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     dingo_cartographer_prefix = get_package_share_directory('dingo_navigation')
     cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(
                                                   dingo_cartographer_prefix, 'config'))

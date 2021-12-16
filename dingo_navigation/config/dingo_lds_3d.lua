@@ -44,16 +44,25 @@ options = {
   landmarks_sampling_ratio = 1.,
 }
 
+
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1
 TRAJECTORY_BUILDER_2D.use_imu_data = false
 TRAJECTORY_BUILDER.pure_localization = true
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 4e2
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2e2
+TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.01)
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.7
+-- POSE_GRAPH.optimize_problem.local_slam_pose_translation_weight = 1.5
+-- POSE_GRAPH.optimize_problem.local_slam_pose_rotation_weight = 1.5
+-- POSE_GRAPH.optimize_problem.odometry_translation_weight = 1.5
+-- POSE_GRAPH.optimize_problem.odometry_rotation_weight = 1.5
 MAP_BUILDER.use_trajectory_builder_2d = true
-MAP_BUILDER.num_background_threads = 7
+MAP_BUILDER.num_background_threads = 4
 POSE_GRAPH.optimize_every_n_nodes = 1000
 POSE_GRAPH.constraint_builder.min_score = 0.7
+
 
 
 return options
